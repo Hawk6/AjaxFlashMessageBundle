@@ -6,17 +6,17 @@ You can override flash message styles as you wish. At the moment they should loo
 
 # Installation
 
-Add AretusaFlashBundle in your composer.json file:
+Add AjaxFlashMessageBundle in your composer.json file:
 ```json
 {
     "require": {
-        "aretusa/flash-bundle": "~1.0"
+        "hawk6/ajax-flash-message-bundle": "~1.0"
     }
 }
 ```
 Now tell Composer to download the bundle by running the command:
 ```console
-php composer.phar update aretusa/flash-bundle
+php composer.phar update hawk6/ajax-flash-message-bundle
 ```
 Composer will install the bundle to your project's vendor/aretusa directory.
 
@@ -32,7 +32,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Aretusa\Bundle\FlashBundle\AretusaFlashBundle(),
+        new Ajax\Bundle\FlashMessageBundle(),
     );
 }
 ```
@@ -44,7 +44,7 @@ php app/console assets:install web --symlink --relative
 
 In layout file:
 ```twig
-{{ include('AretusaFlashBundle::flash-messages.html.twig') }}
+{{ include('AjaxFlashMessageBundle::flash-messages.html.twig') }}
 ```
 # Step 5: add assets to your main layout file
 
@@ -52,12 +52,12 @@ Add jQuery as well if it's not already done.
 ```twig
 {% block javascripts %}
     // ...
-    <script src="//code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
-    <script src="{{ asset('bundles/aretusaflash/js/flash-message.js') }}" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-2.2.2.min.js" type="text/javascript"></script>
+    <script src="{{ asset('bundles/ajaxflashmessage/js/jquery.flash-messenger.js') }}" type="text/javascript"></script>
 {% endblock %}
 {% block stylesheets %}
     // ...
-    <link href="{{ asset('bundles/aretusaflash/css/flash-message.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('bundles/ajaxflashmessage/css/flash-message.css') }}" type="text/css" rel="stylesheet" />
 {% endblock %}
 ```
 # Usage
