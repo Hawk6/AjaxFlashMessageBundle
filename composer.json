@@ -1,0 +1,23 @@
+{
+    "name": "hawk6/ajax-flash-message-bundle",
+    "type": "symfony-bundle",
+    "description": "This Symfony2 bundle symfony flash messages for ajax requests",
+    "keywords": ["Symfony2", "ajax", "flash message", "flashbag"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Łukasz Jastrzębski",
+            "email": "biuro@so2day.pl",
+            "homepage": "http://www.so2day.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Ajax\\Bundle\\FlashMessageBundle\\": "" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "target-dir": "Ajax/Bundle/FlashMessageBundle"
+}

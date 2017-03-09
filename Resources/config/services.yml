@@ -1,0 +1,6 @@
+services:
+    ajax.flash_messenger:
+        class: Ajax\Bundle\FlashMessageBundle\Services\Messenger\Flash
+        arguments: ["@session"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.response}
